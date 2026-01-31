@@ -1,52 +1,84 @@
 # Laravel Task Manager
 
-A simple **Task Manager** web application built with **Laravel 12** and **Bootstrap 5**, allowing users to **create, edit, and delete tasks**. This project is perfect for learning **Laravel MVC**, routing, controllers, models, migrations, and Blade templating.
+## 📌 Project Overview
+A Task Manager web application built with **Laravel**, designed to help users create, manage, and track tasks efficiently.  
+This project demonstrates core Laravel concepts such as routing, controllers, Eloquent ORM, database migrations, Blade templating, and CRUD operations.
 
----
+## 🚀 Features
+- User authentication (login & registration)
+- Create, read, update, and delete (CRUD) tasks
+- Task status management (pending, in progress, completed)
+- Organize tasks efficiently
+- Clean and responsive UI using Blade templates
+- Secure backend with Laravel best practices
 
-## Features
+## 🛠 Technologies Used
+- **Backend:** Laravel (PHP)
+- **Frontend:** Blade Templates, Bootstrap
+- **Database:** MySQL / SQLite
+- **Tools:** Composer, Artisan, Git
 
-- Create, edit, and delete tasks
-- Validation for task input
-- User-friendly interface using Bootstrap 5
-- MVC architecture following Laravel best practices
-- SQLite database support (default)
+## 📂 Project Structure
+```
+laravel-task-manager/
+├── app/                    # Controllers, Models
+├── database/               # Migrations & seeders
+├── resources/views/        # Blade templates
+├── routes/                 # Web routes
+├── public/                 # Public assets
+├── .env.example            # Environment configuration
+├── composer.json           # PHP dependencies
+└── README.md               # Project documentation
+```
 
+## 🚀 Getting Started
 
----
+### 1. Clone the repository
+```bash
+git clone https://github.com/Diphiya/Laravel-task-manager.git
+cd Laravel-task-manager
+```
 
-## Requirements
+### 2. Install dependencies
+```bash
+composer install
+```
 
-- PHP 8.1+  
-- Composer  
-- Laravel 12+ (installed via Composer)  
-- Web server (PHP built-in server or Apache/Nginx)  
+### 3. Configure environment
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
----
-Folder Structure
+### 4. Database setup
+Update your `.env` file with database credentials and run:
+```bash
+php artisan migrate
+```
 
-app/
-├── Http/
-│   ├── Controllers/TaskController.php
-├── Models/Task.php
-resources/
-├── views/
-│   ├── layouts/app.blade.php
-│   └── tasks/
-│       ├── index.blade.php
-│       ├── create.blade.php
-│       └── edit.blade.php
-database/
-├── migrations/
-│   └── create_tasks_table.php
+(Optional)
+```bash
+php artisan db:seed
+```
 
+### 5. Run the application
+```bash
+php artisan serve
+```
 
-Technologies Used
+Application will be available at:
+```
+http://localhost:8000
+```
 
-Laravel 12
+## 📈 Usage
+- Register or login as a user
+- Create and manage tasks
+- Update task status
+- Delete completed or unnecessary tasks
 
-Bootstrap 5
+## 🔮 Future Enhancements
+- Task priorities and deadlines
+- Role-based access control
+- Deployment to cloud hosting
 
-SQLite
-
-PHP 8.5
